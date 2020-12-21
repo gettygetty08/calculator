@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CalculatorForm"
         mc:Ignorable="d"
-        Title="電卓" Height="500" Width="350">
+        Title="電卓" Height="500" Width="350" MinHeight="500" MinWidth="300"
+        ResizeMode="CanResizeWithGrip">
     <Window.Resources>
         
     </Window.Resources>
@@ -26,11 +27,14 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <Label Content="0"
+        <Viewbox Grid.ColumnSpan="5"
+                 HorizontalAlignment="Right">
+
+            <Label x:Name="ResultDisplayLabel" Content="0"
                HorizontalAlignment="Right"
                VerticalAlignment="Bottom"
-               FontSize="60"
-               Grid.ColumnSpan="5"/>
+               FontSize="60"/>
+        </Viewbox>
 
         <Button x:Name="DivisionButton"
                 Content="÷"
@@ -68,19 +72,22 @@
                 Content="9"
                 Margin="5"
                 Grid.Column="3"
-                Grid.Row="2"/>
+                Grid.Row="2"
+                Click="numberButtonClick"/>
 
         <Button x:Name="EightButton"
                 Content="8"
                 Margin="5"
                 Grid.Column="2"
-                Grid.Row="2"/>
+                Grid.Row="2"
+                Click="numberButtonClick"/>
 
         <Button x:Name="SevenButton"
                 Content="7"
                 Margin="5"
                 Grid.Column="1"
-                Grid.Row="2"/>
+                Grid.Row="2"
+                Click="numberButtonClick"/>
 
         <Button Content=""
                 Margin="5"
@@ -97,25 +104,29 @@
                 Content="6"
                 Margin="5"
                 Grid.Column="3"
-                Grid.Row="3"/>
+                Grid.Row="3"
+                Click="numberButtonClick"/>
 
         <Button x:Name="FiveButton"
                 Content="5"
                 Margin="5"
                 Grid.Column="2"
-                Grid.Row="3"/>
+                Grid.Row="3"
+                Click="numberButtonClick"/>
 
         <Button x:Name="FourButton"
                 Content="4"
                 Margin="5"
                 Grid.Column="1"
-                Grid.Row="3"/>
+                Grid.Row="3"
+                Click="numberButtonClick"/>
 
         <Button x:Name="ClearButton"
                 Content="C"
                 Margin="5"
                 Grid.Column="0"
-                Grid.Row="3"/>
+                Grid.Row="3"
+                Click="clearButtonClick"/>
 
         <Button x:Name="AdditionButton"
                 Content="+"
@@ -128,19 +139,22 @@
                 Content="3"
                 Margin="5"
                 Grid.Column="3"
-                Grid.Row="4"/>
+                Grid.Row="4"
+                Click="numberButtonClick"/>
 
         <Button x:Name="TwoButton"
                 Content="2"
                 Margin="5"
                 Grid.Column="2"
-                Grid.Row="4"/>
+                Grid.Row="4"
+                Click="numberButtonClick"/>
 
         <Button x:Name="OneButton"
                 Content="1"
                 Margin="5"
                 Grid.Column="1"
-                Grid.Row="4"/>
+                Grid.Row="4"
+                Click="numberButtonClick"/>
 
         <Button x:Name="AllClearButton"
                 Content="AC"
@@ -158,19 +172,22 @@
                 Content="."
                 Margin="5"
                 Grid.Column="2"
-                Grid.Row="5"/>
+                Grid.Row="5"
+                Click="decimalPointButtonClick"/>
 
         <Button x:Name="DoubleZeroButton"
                 Content="00"
                 Margin="5"
                 Grid.Column="1"
-                Grid.Row="5"/>
+                Grid.Row="5"
+                Click="numberButtonClick"/>
 
         <Button x:Name="ZeroButton"
                 Content="0"
                 Margin="5"
                 Grid.Column="0"
-                Grid.Row="5"/>
+                Grid.Row="5"
+                Click="numberButtonClick"/>
 
 
 
